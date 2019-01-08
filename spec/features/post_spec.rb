@@ -6,7 +6,6 @@ describe 'navigate' do
     @author = Author.create(name: "Steven", hometown: "Somewhere")
     @post.author = @author
     @post.save
-    binding.pry
   end
 
   it 'shows the title on the show page in a h1 tag' do
