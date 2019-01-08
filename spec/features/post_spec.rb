@@ -4,8 +4,8 @@ describe 'navigate' do
   before do
     @post = Post.create(title: "My Post", description: "My post desc")
     @author = Author.create(name: "Steven", hometown: "Somewhere")
-    @author.posts << @post
-    @author.save
+    @post.author = @author
+    @post.save
   end
 
   it 'shows the title on the show page in a h1 tag' do
